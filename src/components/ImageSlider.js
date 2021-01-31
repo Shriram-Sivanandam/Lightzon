@@ -6,6 +6,7 @@ function ImageSlider() {
         let sliderImages = document.querySelectorAll('.slide');
         let rightArrow = document.querySelector('#arrow-right');
         let leftArrow = document.querySelector('#arrow-left');
+        let slider = document.querySelector('#slider');
         let current = 0;
 
         function reset() {
@@ -36,14 +37,14 @@ function ImageSlider() {
                 current = sliderImages.length;
             }
             slideLeft();
-        }, false);
+        });
 
         rightArrow.addEventListener('click', function(){
             if(current === sliderImages.length-1){
                 current = -1;
             }
             slideRight();
-        }, false);
+        });
 
         init();
     });
